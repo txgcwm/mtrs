@@ -13,10 +13,6 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/builds/exe)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/builds/lib)
 SET (FFMPEG_VERSION ffmpeg-2.1.1)
 
-if (${CMAKE_BUILD_TYPE} EQUAL "Debug")
-	add_definitions( -DDEBUG -D_DEBUG )
-	message("SET DEBUG_TYPE.")
-endif()
 
 if (UNIX)
 	SET (FFMPEG_LIB_PATH "${PROJECT_SOURCE_DIR}/sdk/${FFMPEG_VERSION}/centos")
